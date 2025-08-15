@@ -1,22 +1,25 @@
 @charset "utf-8";
 
-body {
-    background-image: url("imagens/wallpaper001.jpg");
+body{
+    height: 98vh;
+    /*
+    background-color: black;
+    background-image: url("imagens/wallpaper002.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    */
+    background: black url("imagens/wallpaper002.jpg") center center no-repeat fixed;
+    background-size: cover;
 }
 
-.quadrado {
-    border: 2px solid black;
-    width: 300px;
-    height: 300px;
-    display: inline-block;
-    border-radius: 10px;
-    background-color: lightgray;
+main {
+    background-color: white;
+    max-width: 600px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 1px solid darkblue;
 }
 
-#q2{
-    background-image: linear-gradient(to bottom, yellow, red);
-}
-
-#q3{
-    background-image: url("imagens/pattern003.png");
-}

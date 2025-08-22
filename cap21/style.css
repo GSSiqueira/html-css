@@ -11,23 +11,34 @@ table {
     border: 4px solid #772e2e;
 }
 
-th {
-    text-align: center;
-    vertical-align: middle;
-}
-
-tr:nth-of-type(odd) {
-    background-color: #585757;
-    color: white;
-}
-
 tr td:nth-of-type(3) {
-    background-color: #cecb307c;
+    background-color: #cecb305b;
 }
 
-td {
+tbody > tr:nth-of-type(even) td{
+    background-color: #cac9c9;
+    color: rgb(0, 0, 0);
+}
+
+td,th {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: center;
     vertical-align: middle;
+}
+
+th{
+    background-color: #585757;
+    color: white;
+}
+
+.num{
+    text-align: right;
+}
+
+caption{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: lightcoral;
 }

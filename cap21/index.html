@@ -10,11 +10,13 @@
 
 <body>
     <h1>Testes com Tabelas</h1>
+    <h2>Tabela Simples</h2>
     <table>
+        
         <tr>
-            <th>a1</th>
-            <th>b1</th>
-            <th>c1</th>
+            <td>a1</td>
+            <td>b1</td>
+            <td>c1</td>
         </tr>
         <tr>
             <td>a2</td>
@@ -31,6 +33,40 @@
             <td>b4</td>
             <td>c4</td>
         </tr>
+    </table>
+    <h2>Tabela mais complexa</h2>
+    <table>
+        <caption>População de algumas unidades federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.919.049</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.919.049</td>
+            </tr>           
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.919.049</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>97.896.789</strong></td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 

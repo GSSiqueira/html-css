@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Spaghetti Carbonara",
+    "ingredients": ["spaghetti", "eggs", "parmesan cheese", "bacon", "black pepper"],
+    "instructions": "Cook spaghetti. Fry bacon. Mix eggs and cheese. Combine all and season."
+  },
+  {
+    "title": "Tomato Soup",
+    "ingredients": ["tomatoes", "onion", "garlic", "vegetable broth", "cream"],
+    "instructions": "Cook tomatoes, onion, and garlic. Add broth and simmer. Blend and add cream."
+  }
+]

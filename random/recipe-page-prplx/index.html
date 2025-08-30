@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recipe List</title>
+</head>
+<body>
+  <h1>My Recipes</h1>
+  <div id="recipe-container"></div>
+
+  <script>
+    // Load the JSON file and display recipes
+    fetch('./recipes.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('recipe-container');
+        data.forEach(recipe => {
+          const recipeDiv = document.createElement('div');
+
+          const title = document.createElement('h2');
+          title.textContent = recipe.title;
+          recipeDiv.appendChild(title);
+
+          const ingredients = document.createElement('ul');
+          recipe.ingredients.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            ingredients.appendChild(li);
+          });
+          recipeDiv.appendChild(ingredients);
+
+          const instructions = document.createElement('p');
+          instructions.textContent = recipe.instructions;
+          recipeDiv.appendChild(instructions);
+
+          container.appendChild(recipeDiv);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading recipes:', error);
+      });
+  </script>
+</body>
+</html>

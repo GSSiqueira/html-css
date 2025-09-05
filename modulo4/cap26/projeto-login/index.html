@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <main>
+        <section id="login">
+            <div id="photo">
+                
+            </div>
+            <div id="formDiv">
+                <h1>Login</h1>
+                <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+                <form action="login.php" method="post">
+                    <label for="iemail">E-mail</label><input type="email" name="email" id="iemail" placeholder="Digite seu email aqui." required><br>
+                    <label for="ipass">Senha</label><input type="password" name="pass" id="ipass" placeholder="Digite sua senha aqui." required><br>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

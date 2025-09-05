@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+:root{
+    --main-color: rgb(145, 12, 12);
+    --secondary-color: rgb(110, 64, 64);
+}
+
+
+@media screen and (min-width:768px) and (max-width:992px) {
+
+    body{
+        background-image: linear-gradient(to top, var(--main-color), var(--secondary-color));
+    }
+
+    #login {
+        width: 80vw;
+    }
+
+    #photo {
+        float: left;
+        width: 40%;
+        height: 100%;
+    }
+
+    #formDiv {
+        float: right;
+        width: 60%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:992px) {
+
+    body{
+        background-image: linear-gradient(to top, var(--main-color), var(--secondary-color));
+    }
+
+    #login {
+        width: 950px;
+    }
+
+    #photo {
+        float: right;
+        width: 50%;
+        height: 100%;
+        background: var(--secondary-color) url(../img/pattern-med.jpg) no-repeat center top;
+        background-size: cover;
+    }
+
+    #formDiv {
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+}

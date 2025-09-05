@@ -3,6 +3,7 @@
 :root{
     --main-color: rgb(145, 12, 12);
     --secondary-color: rgb(110, 64, 64);
+    --highlight-color: rgb(201, 167, 16);
 }
 .material-symbols-outlined {
   font-variation-settings:
@@ -66,4 +67,44 @@ h1{
 
 p{
     font-size: 0.8em;
+}
+
+input[type=submit]{
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover{
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+.button{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 10px;
+    text-decoration: none;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.button > span{
+    font-size: 1em;
+}
+
+.button:hover{
+    background-color: var(--highlight-color);
+    color: white;
 }

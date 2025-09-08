@@ -14,6 +14,7 @@
 
     #login {
         width: 80vw;
+        height: 400px;
     }
 
     #photo {
@@ -26,6 +27,9 @@
         float: right;
         width: 60%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 }
 
@@ -37,6 +41,7 @@
 
     #login {
         width: 950px;
+        height: 500px;
     }
 
     #photo {
@@ -51,6 +56,9 @@
         float: left;
         width: 50%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     h1 {

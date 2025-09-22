@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .container{
+            border: 3px solid blue;
+            display: grid;
+            gap: 10px;
+            height: 500px;
+            grid-template: 2fr 1fr 1fr/ repeat(4,1fr);
+        }
+
+        .item{
+            border: 3px dashed red;
+        }
+
+        .item1{
+            grid-area: 1 / 1 / span 1 / span 4;
+            background-color: lightblue;
+        }
+
+        .item2{
+            grid-area: 2 / 1 / 4 / 3;
+            background-color: lightgreen;
+        }
+
+        .item3{
+            grid-row: 2/-1;
+            grid-column: 3/ -1;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">Caixa 1</div>
+        <div class="item item2">Caixa 2</div>
+        <div class="item item3">Caixa 3</div>
+    </div>
+</body>
+</html>

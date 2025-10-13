@@ -30,7 +30,7 @@ header{
 
 }
 
-header #headerWrapper{
+.container{
     max-width: 800px;
     margin: auto;
     display: flex;
@@ -134,6 +134,9 @@ main #quote{
 
 main #quote blockquote{
     max-width: 800px;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
     margin: auto;
 }
 

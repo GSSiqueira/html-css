@@ -124,7 +124,24 @@ main #info li{
     padding: 72px;
     border-radius: 8px;
     margin: 24px 0px;
-}  
+}
+
+main #quote{
+    background-color: var(--quote-background);
+    color: var(--quote-text);
+    padding: 72px 0px;   
+}
+
+main #quote blockquote{
+    max-width: 800px;
+    margin: auto;
+}
+
+main #quote p{
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+}
 
 footer{
     background-color: var(--background-color);

@@ -21,7 +21,6 @@
 
 body{
     height: 100vh;
-    width: 100%;
 }
 
 header{
@@ -94,6 +93,38 @@ header input{
     border-radius: 8px;
     font-weight: 900;
 }
+
+main #info{
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+main #info h2{
+    font-size: 36px;
+    color: var(--info-text);
+    font-weight: 900;
+    margin-top: 24px;
+}
+
+main #info ul{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-bottom: 24px;
+
+}
+
+main #info li{
+    border: 3px solid var(--button-color);
+    padding: 72px;
+    border-radius: 8px;
+    margin: 24px 0px;
+}  
 
 footer{
     background-color: var(--background-color);

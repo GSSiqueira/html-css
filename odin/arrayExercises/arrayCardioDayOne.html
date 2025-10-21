@@ -103,6 +103,44 @@
         const filteredArray = removeFromArray([1, 2, 3, 4], 3);
         console.log(filteredArray);
 
+
+        function sumAll(numA,numB){
+            let first, second;
+            let sum = 0;
+            if(numA<numB){
+                first = numA;
+                second = numB;
+            }
+            else{
+                first = numB;
+                second = numA;
+            }
+            for(let i=first;i<=second;i++){
+                sum+=i;
+            }
+            return sum;
+        }
+        console.log(sumAll(1, 4));
+
+        function leapYears(year){
+            if(year%400==0){
+                return true;
+            }
+            else if(year%100==0){
+                return false;
+            }
+            else if(year%4==0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        console.log(leapYears(2000)); // is a leap year: returns true
+        console.log(leapYears(1985));// is not a leap year: returns false
+
+
     </script>
 </body>
 

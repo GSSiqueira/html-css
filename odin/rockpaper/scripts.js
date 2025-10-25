@@ -46,6 +46,22 @@ function playRound(humanSelection, computerSelection) {
     }
 }
 
+function endGame(){
+    const winner = document.querySelector("#winner");
+    const playerFinalScore = parseInt(playerScore.textContent);
+    const computerFinalScore = parseInt(computerScore.textContent);
+    if(playerFinalScore>computerFinalScore){
+        winner.textContent = `You Win! ${playerFinalScore} x ${computerFinalScore}`;
+    }   
+    else if(playerFinalScore<computerFinalScore){
+        winner.textContent = `You Loose! ${playerFinalScore} x ${computerFinalScore}`;
+    }
+    else{
+        winner.textContent = `It's a draw! ${playerFinalScore} x ${computerFinalScore}`;
+    }
+
+}
+
 
 const playsMenu = document.querySelector("#plays");
 playsMenu.addEventListener("click", e => {
@@ -57,6 +73,13 @@ playsMenu.addEventListener("click", e => {
     }
     else if(result<0){
         computerScore.textContent = parseInt(computerScore.textContent)+1;
+    }
+
+    let rounds = parseInt(roundsPlayed.textContent)+1;
+
+    roundsPlayed.textContent = rounds;
+    if(rounds===5){
+        endGame();
     }
 
 }

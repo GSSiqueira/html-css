@@ -1,4 +1,10 @@
 const container = document.querySelector("#container");
+const gridButton = document.querySelector("button");
+
+function randomRGBColor() {
+    return `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
+}
+
 
 function addBlocks(amount) {
     for (let j = 0; j < amount; j++) {
@@ -12,5 +18,15 @@ function addBlocks(amount) {
         }
     }
 }
+
+container.addEventListener("mouseover", (e) => {
+    e.target.style.backgroundColor = randomRGBColor();
+});
+
+gridButton.addEventListener("click", () => {
+    let newAmount = prompt("Type the new grid size: ");
+    container.innerHTML = "";
+    addBlocks(newAmount);
+});
 
 addBlocks(16);

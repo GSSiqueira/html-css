@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+#container{
+    height: 1020px;
+    width: 1020px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1px;
+}

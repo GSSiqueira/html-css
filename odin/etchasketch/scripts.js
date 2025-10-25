@@ -24,7 +24,13 @@ container.addEventListener("mouseover", (e) => {
 });
 
 gridButton.addEventListener("click", () => {
-    let newAmount = prompt("Type the new grid size: ");
+    let newAmount = prompt("Type the new grid size (min: 1, max: 100): ");
+    if (newAmount < 0) {
+        newAmount = 1;
+    }
+    else if (newAmount > 100) {
+        newAmount = 100;
+    }
     container.innerHTML = "";
     addBlocks(newAmount);
 });

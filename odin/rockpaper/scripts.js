@@ -52,7 +52,9 @@ function playGame() {
     let computerSelection;
     let humanScore =0;
     let computerScore = 0;
+
     for (let i = 0; i < 5; i++) {
+
         humanSelection = getHumanChoice()
         computerSelection = getComputerChoice()
         let result = playRound(humanSelection, computerSelection)
@@ -74,6 +76,3 @@ function playGame() {
         console.log(`It's a tie! ${humanScore}x${computerScore}.`)
     }
 }
-
-playGame()
-

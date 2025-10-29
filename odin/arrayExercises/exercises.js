@@ -9,7 +9,6 @@ function shuffle(array) {
     console.log(shuffle([1, 2, 3]));
 }
 
-
 function mapToNames() {
 
     let john = { name: "John", age: 25 };
@@ -66,4 +65,44 @@ function sortUsersByAge() {
     console.log(arr[2].name); // Pete
 }
 
-sortUsersByAge();
+function callGetAverageAge() {
+    let john = { name: "John", age: 25 };
+    let pete = { name: "Pete", age: 30 };
+    let mary = { name: "Mary", age: 29 };
+
+    let arr = [john, pete, mary];
+
+    console.log(getAverageAge(arr));// (25 + 30 + 29) / 3 = 28
+}
+
+function getAverageAge(array) {
+    const numberOfMembers = array.length;
+
+    const totalAge = array.reduce((total, person) => {
+        return total + person.age;
+    }, 0);
+
+    return (totalAge / numberOfMembers);
+
+}
+
+let users = [
+    { id: 'john', name: "John Smith", age: 20 },
+    { id: 'ann', name: "Ann Smith", age: 24 },
+    { id: 'pete', name: "Pete Peterson", age: 31 },
+];
+
+  function groupById(users) {
+    let usersById = {};
+
+    usersById = users.reduce((newUsers,user)=>{
+      newUsers[user.id] = user;
+      return newUsers;
+    },{});
+    
+  console.log(usersById)
+
+    return usersById;
+}
+
+groupById(users);

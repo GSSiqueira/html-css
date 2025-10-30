@@ -67,4 +67,19 @@ operatorsPanel.addEventListener("click",(e)=> {
 const clearButton = document.querySelector("#clear");
 clearButton.addEventListener("click", clear);
 
+const resultButton = document.querySelector("#result");
+resultButton.addEventListener("click",(e)=>{
+    if(numbers.a && numbers.b && operator){
+        let result = operate(operator,parseInt(numbers.a),parseInt(numbers.b));
+        clear();
+        numbers = {
+            a:result,
+            b:""
+        };
+        updateDisplay();
+    }
+})
+
+
+
 

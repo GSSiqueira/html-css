@@ -17,6 +17,7 @@ function clear() {
     };
     operator = "";
     currentNumber = "a";
+    updateDisplay();
 }
 
 function operate(operator, a, b) {
@@ -49,5 +50,7 @@ numbersPanel.addEventListener("click", (e) => {
     }
 });
 
+const clearButton = document.querySelector("#clear");
+clearButton.addEventListener("click", clear);
 
 

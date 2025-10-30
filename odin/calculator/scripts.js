@@ -7,7 +7,7 @@ let currentNumber = "a";
 
 function updateDisplay() {
     const display = document.querySelector("#display h2");
-    display.textContent = numbers.a+operator+numbers.b;
+    display.textContent = numbers.a + operator + numbers.b;
 }
 
 function clear() {
@@ -35,6 +35,18 @@ function operate(operator, a, b) {
     }
 }
 
+function showResult() {
+    if (numbers.a && numbers.b && operator) {
+        let result = operate(operator, parseInt(numbers.a), parseInt(numbers.b));
+        clear();
+        numbers = {
+            a: result,
+            b: ""
+        };
+        updateDisplay();
+    }
+}
+
 const numbersPanel = document.querySelector("#numbersPanel");
 numbersPanel.addEventListener("click", (e) => {
     if (e.target.classList.contains("number")) {
@@ -50,15 +62,17 @@ numbersPanel.addEventListener("click", (e) => {
     }
 });
 
-const operatorsPanel =document.querySelector("#operatorsPanel");
-operatorsPanel.addEventListener("click",(e)=> {
-    if(e.target.classList.contains("operator")){
-        if(operator===""){
-            operator=e.target.textContent;
+const operatorsPanel = document.querySelector("#operatorsPanel");
+operatorsPanel.addEventListener("click", (e) => {
+    if (e.target.classList.contains("operator")) {
+        if (operator === "" || numbers.b==="") {
+            operator = e.target.textContent;
             currentNumber = "b";
         }
-        else{
-            //Function to call result button
+        else if(operator!==""&& numbers.b!==""){
+            showResult();
+            operator = e.target.textContent;
+            currentNumber = "b";
         }
         updateDisplay();
     }
@@ -68,17 +82,7 @@ const clearButton = document.querySelector("#clear");
 clearButton.addEventListener("click", clear);
 
 const resultButton = document.querySelector("#result");
-resultButton.addEventListener("click",(e)=>{
-    if(numbers.a && numbers.b && operator){
-        let result = operate(operator,parseInt(numbers.a),parseInt(numbers.b));
-        clear();
-        numbers = {
-            a:result,
-            b:""
-        };
-        updateDisplay();
-    }
-})
+resultButton.addEventListener("click", showResult);
 
 
 

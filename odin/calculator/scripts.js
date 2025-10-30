@@ -7,7 +7,7 @@ let currentNumber = "a";
 
 function updateDisplay() {
     const display = document.querySelector("#display h2");
-    display.textContent = numbers[currentNumber];
+    display.textContent = numbers.a+operator+numbers.b;
 }
 
 function clear() {
@@ -49,6 +49,20 @@ numbersPanel.addEventListener("click", (e) => {
         updateDisplay();
     }
 });
+
+const operatorsPanel =document.querySelector("#operatorsPanel");
+operatorsPanel.addEventListener("click",(e)=> {
+    if(e.target.classList.contains("operator")){
+        if(operator===""){
+            operator=e.target.textContent;
+            currentNumber = "b";
+        }
+        else{
+            //Function to call result button
+        }
+        updateDisplay();
+    }
+})
 
 const clearButton = document.querySelector("#clear");
 clearButton.addEventListener("click", clear);

@@ -31,6 +31,11 @@ div#display{
     grid-column: 2/6;
     background-color: black;
     color: white;
+    text-align: right;
+    padding: 16px;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    align-items: center;
 }
 
 div#numbersPanel{

@@ -40,7 +40,7 @@ function showResult() {
         let result = operate(operator, parseInt(numbers.a), parseInt(numbers.b));
         clear();
         numbers = {
-            a: result,
+            a: result.toString(),
             b: ""
         };
         updateDisplay();
@@ -65,11 +65,11 @@ numbersPanel.addEventListener("click", (e) => {
 const operatorsPanel = document.querySelector("#operatorsPanel");
 operatorsPanel.addEventListener("click", (e) => {
     if (e.target.classList.contains("operator")) {
-        if (operator === "" || numbers.b==="") {
+        if (operator === "" || numbers.b === "") {
             operator = e.target.textContent;
             currentNumber = "b";
         }
-        else if(operator!==""&& numbers.b!==""){
+        else if (operator !== "" && numbers.b !== "") {
             showResult();
             operator = e.target.textContent;
             currentNumber = "b";

@@ -29,13 +29,19 @@ function operate(operator, a, b) {
         case "*":
             return a * b;
         case "/":
-            return a / b;
+            if(b!==0){
+                return a / b;
+            }
+            else{
+                alert("Erro! Não é possível dividir por 0.")
+                return 0;
+            }
         default:
             return 0;
     }
 }
 
-function showResult() {
+function showResult(reset) {
     if (numbers.a && numbers.b && operator) {
         let result = operate(operator, parseInt(numbers.a), parseInt(numbers.b));
         clear();
@@ -44,6 +50,7 @@ function showResult() {
             b: ""
         };
         updateDisplay();
+        reset?numbers.a="":null;
     }
 }
 
@@ -70,7 +77,7 @@ operatorsPanel.addEventListener("click", (e) => {
             currentNumber = "b";
         }
         else if (operator !== "" && numbers.b !== "") {
-            showResult();
+            showResult(false);
             operator = e.target.textContent;
             currentNumber = "b";
         }
@@ -82,7 +89,7 @@ const clearButton = document.querySelector("#clear");
 clearButton.addEventListener("click", clear);
 
 const resultButton = document.querySelector("#result");
-resultButton.addEventListener("click", showResult);
+resultButton.addEventListener("click", () => showResult(true));
 
 
 

@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Norse Bold";
+    src: url(Norse-Bold.otf) format("opentype");
+}
+
+:root{
+    --button-color: #596D48;
+    --input-border-light: #E5E7EB;
+    --font-color:black;
+    --bg-color: rgb(235, 235, 235);
+    --section-color: white;
+}
+
+body{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+section.backgroundPicture{
+    background-image: url(halie-west-25xggax4bSA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+main .firstSection{
+    height: 100%;
+}
+
+main form{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main .secondSection{
+    height: 100%;
+}
+
+main .thirdSection{
+    height: 100%;
+}

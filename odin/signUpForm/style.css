@@ -9,7 +9,7 @@
     --button-color: #596D48;
     --input-border-light: #E5E7EB;
     --font-color:black;
-    --bg-color: rgb(235, 235, 235);
+    --bg-color: rgba(243, 241, 241, 0.329);
     --section-color: white;
 }
 
@@ -17,12 +17,47 @@ body{
     height: 80vh;
     display: grid;
     grid-template-columns: 2fr 3fr;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
 }
 
 section.backgroundPicture{
     background-image: url(halie-west-25xggax4bSA-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+img{
+    height: 80%;
+}
+
+section.backgroundPicture .odinLogo{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    background-color: rgba(0, 0, 0, 0.397);
+    margin-top: 15vh;
+}
+
+section.backgroundPicture .odinLogo h1{
+    color: white;
+    font-family: "Norse Bold", sans-serif;
+    font-size: 5rem;
+}
+
+section.backgroundPicture p{
+    color: white;
+    text-align: center;
+    padding: 12px 0px;
+}
+
+section.backgroundPicture p>a{
+    color: white;
 }
 
 main{
@@ -31,6 +66,8 @@ main{
 }
 
 main .firstSection{
+
+    padding-left: 36px;
     height: 100%;
 }
 
@@ -40,9 +77,15 @@ main form{
 }
 
 main .secondSection{
+    padding-left: 36px;
     height: 100%;
+    background-color: var(--section-color);
+    border: none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.336);
 }
 
 main .thirdSection{
+
+    padding-left: 36px;
     height: 100%;
 }

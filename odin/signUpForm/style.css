@@ -69,6 +69,12 @@ main .firstSection{
 
     padding-left: 36px;
     height: 100%;
+    padding-top: 120px;
+}
+
+main .firstSection p{
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 main form{
@@ -109,8 +115,44 @@ main .secondSection .formGroup label{
     font-size: 0.7rem;
 }
 
+main .secondSection .formGroup input{
+    border-radius: 4px;
+}
+
+main .secondSection .formGroup input:focus{
+
+        outline: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.366);
+}
+
+main .secondSection .formGroup input:valid{
+    border-color: green;
+}
+
+main .secondSection .formGroup input:invalid{
+    border-color: red;
+}
+
 main .thirdSection{
 
     padding-left: 36px;
     height: 100%;
+}
+
+main .thirdSection button{
+    background-color: var(--button-color);
+    color: white;
+    font-weight: bold;
+    padding: 8px 54px;
+    border: none;
+    border-radius: 8px;
+    margin: 32px 0px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.349);
+    cursor: pointer;
+}
+
+main .thirdSection p>a{
+    color: var(--button-color);
+    font-weight: bold;
+    text-decoration: none;
 }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail
+    </title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            color: white;
+            text-align: center;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        #gridContainer{
+            height: 1000px;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 1fr 1fr 5fr 1fr;
+            gap: 15px;
+            grid-template-areas: 
+            "header header"
+            "sidebar nav"
+            "sidebar article"
+            "footer footer";
+        }
+
+        header{
+            background-color: green;
+            grid-area: header;
+        }
+
+        aside{
+            background-color: cyan;
+            grid-area: sidebar;
+        }
+        nav{
+            background-color: purple;
+            grid-area: nav;
+        }
+        article{
+            background-color: violet;
+            grid-area: article;
+        }
+        footer{
+            background-color: slategrey;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="gridContainer">
+
+        <header>
+            <h1>Header</h1>
+        </header>
+        <aside>
+            <h1>Sidebar</h1>
+        </aside>
+        <nav>
+            <h1>Nav</h1>
+        </nav>
+        <article>
+            <h1>Article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, tenetur reprehenderit ratione quam modi
+                nulla. Ipsum earum repudiandae neque a. Nostrum illo placeat corrupti dolor distinctio molestias sit?
+                Distinctio, quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nostrum.
+                Repudiandae, iure quaerat maiores explicabo corrupti inventore accusantium quo soluta aliquid. Amet
+                consequatur voluptatibus, quaerat qui ipsam quibusdam molestias et. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Deserunt veniam mollitia vel ducimus vitae officia accusantium velit
+                neque, voluptates error quasi! Earum beatae sint nesciunt officiis, incidunt fugiat ab error!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fugit totam quidem amet. Neque blanditiis
+                vitae est sit fuga labore, esse repellendus. Tempore ab dolorem explicabo autem, culpa corrupti placeat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut beatae, provident corporis saepe nihil eos
+                pariatur dicta ad, doloribus sed, temporibus atque dolores laboriosam quo repellat consectetur esse
+                minima reprehenderit.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit iste quibusdam molestias quo hic
+                laboriosam esse perferendis laudantium ipsum debitis sunt, tempora velit distinctio dignissimos
+                molestiae quisquam itaque facilis? Soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime, doloremque quidem. Aspernatur maiores totam dolor quae iure, dolorum, ipsam tempore perspiciatis
+                odit magnam, provident officiis corrupti obcaecati quis ea alias.</p>
+        </article>
+        <footer>
+            <h1>Footer</h1>
+        </footer>
+    </div>
+</body>
+
+</html>

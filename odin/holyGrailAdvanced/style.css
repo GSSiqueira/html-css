@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-:root{
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -8,9 +8,62 @@
 
 a{
     text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 ul{
     list-style-type: none;
     list-style-position: outside;
+}
+
+#mainGrid{
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer"
+    ;
+    background-color: lightgray;
+}
+
+header{
+    grid-area: header;
+    background-color: rgb(87, 86, 86);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+header nav>ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+
+aside{
+    grid-area: aside;
+    background-color: rgb(175, 3, 3);
+}
+
+main{
+    grid-area: main;
+}
+
+menu>ul{
+    background-color: rgb(175, 3, 3);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding: 12px 0px;
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 12px 0px;
 }

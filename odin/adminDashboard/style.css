@@ -1,30 +1,68 @@
 @charset "utf-8";
 
-html,body{
+html,
+body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#gridContainer{
+#gridContainer {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 6fr;
     grid-template-areas: "nav header" "nav main";
 }
 
-nav{
+nav {
     grid-area: nav;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
-nav #navLogo img{
+nav>div,
+nav>ul {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-areas: "icon link";
+}
+
+
+nav #navLogo img {
+
+    display: inline-block;
     width: 50px;
 }
 
-nav ul>li>img{
+nav ul {
+    margin-top: 50px;
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+nav ul>li{
+        display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+}
+
+nav>div>img,
+nav>ul>li>img {
+    grid-area: icon;
+}
+
+nav>div>a,
+nav>ul>li>a {
+    grid-area: link;
+}
+
+nav ul>li>img {
+    display: inline-block;
     width: 20px;
 }
-header{
+
+header {
     grid-area: header;
 }
-main{
+
+main {
     grid-area: main;
 }

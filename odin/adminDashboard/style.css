@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+:root{
+    --nav-color: rgb(40, 139, 179);
+}
+
 html,
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -17,7 +21,7 @@ nav {
     display: flex;
     flex-flow: column nowrap;
     padding: 24px;
-    background-color: rgb(40, 139, 179);   
+    background-color: var(--nav-color);   
 }
 
 nav a{
@@ -83,6 +87,7 @@ header {
     display: grid;
     grid-template-columns: 5fr 2fr;
     grid-template-rows: 1fr 1fr;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header img{
@@ -95,7 +100,7 @@ header #searchBox{
     grid-template-columns: 30px 1fr;
     justify-content: space-around;
     align-items: center;
-    padding: 8px 16px;
+    padding: 8px 24px;
 }
 
 header #userBox{
@@ -110,6 +115,22 @@ header .profilePic{
     border-radius: 50%;
 }
 
+header #welcome{
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "pic para" "pic name";
+}
+
+header #welcome img{
+    grid-area: pic;
+
+}
+
+
 main {
     grid-area: main;
+    background-color: rgb(222, 226, 233);
+    padding: 24px;
 }

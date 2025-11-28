@@ -6,6 +6,23 @@ header{
 }
 
 header .hero{
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
     background-image: url(imgs/pexels-steinportraits-1898555.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
     height: 600px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+header h1{
+    text-align: end;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 4rem;
 }

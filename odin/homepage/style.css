@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+header{
+    background-color: rgb(12, 162, 199);
+    padding: 48px;
+}
+
+header .hero{
+    background-image: url(imgs/pexels-steinportraits-1898555.jpg);
+    height: 600px;
+}

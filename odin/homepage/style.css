@@ -11,6 +11,7 @@ h4 {
 h2 {
     text-align: center;
     font-size: 3rem;
+    margin-top: 40px;
 }
 
 
@@ -57,7 +58,6 @@ header h1 {
 
 header .hero-text {
 
-    margin: 48px 0px;
     text-align: justify;
 }
 

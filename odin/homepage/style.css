@@ -23,7 +23,7 @@ header {
 
 header .decoration {
     position: absolute;
-    top: -25%;
+    top: -20%;
     left: -55%;
     z-index: -1;
     height: 80vh;
@@ -93,4 +93,22 @@ main .card > div > p{
 
     font-size: 1.1rem;
     color: rgb(75, 74, 74);
+}
+footer{
+    background-color: rgb(12, 162, 199);
+    padding: 48px;
+    color: white;
+}
+
+footer strong{
+    font-size: 2rem;
+}
+
+.footer-img{
+    background-image: url(imgs/footer-img-small.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 600px;
+    width: 100%;
 }

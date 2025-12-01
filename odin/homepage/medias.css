@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
 
     header .decoration {
         top: -80%;
@@ -19,12 +19,29 @@
         margin-left: -70px;
         margin-top: -60px;
         margin-right: 20px;
-        
+
     }
 
-    main{
+    main {
         display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 32px;
     }
+
+    footer {
+        padding: 48px;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+
+    footer .footer-img {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    footer .footer-img {
+        height: 600px;
+    }
+
 }

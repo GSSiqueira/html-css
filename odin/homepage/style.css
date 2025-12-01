@@ -96,8 +96,10 @@ main .card > div > p{
 }
 footer{
     background-color: rgb(12, 162, 199);
-    padding: 48px;
     color: white;
+}
+footer .footer-text{
+    padding: 48px;
 }
 
 footer strong{
@@ -110,5 +112,4 @@ footer strong{
     background-size: cover;
     background-position: center top;
     height: 600px;
-    width: 100%;
 }

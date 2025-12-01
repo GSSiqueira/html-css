@@ -1,8 +1,21 @@
 @charset "utf-8";
 
 header{
-    background-color: rgb(12, 162, 199);
+    position: relative;
+    overflow: hidden;
     padding: 48px;
+}
+
+header .decoration {
+    position: absolute;
+    top: -25%;
+    left: -55%;
+    z-index: -1;
+    height: 80vh;
+    width: 200vw;
+    background-color: rgb(12, 162, 199);
+    transform: rotate(-25deg);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 header .hero{
@@ -16,13 +29,13 @@ header .hero{
     background-size: cover;
     background-position: center top;
     height: 600px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 
 }
 
 header h1{
     text-align: end;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     font-size: 4rem;
 }

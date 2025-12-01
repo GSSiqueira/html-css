@@ -1,18 +1,21 @@
 @charset "utf-8";
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
-h2{
+h2 {
     text-align: center;
     font-size: 3rem;
 }
 
 
 
-header{
+header {
     position: relative;
     overflow: hidden;
     padding: 32px;
@@ -30,7 +33,7 @@ header .decoration {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-header .hero{
+header .hero {
 
     display: flex;
     flex-flow: column nowrap;
@@ -45,18 +48,49 @@ header .hero{
 
 }
 
-header h1{
+header h1 {
     text-align: end;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     font-size: 4rem;
 }
-header .hero-text{
-    margin-top: 32px;
+
+header .hero-text {
+
+    margin: 48px 0px;
     text-align: justify;
 }
 
-header .hero-text p{
+header .hero-text p {
     font-size: 1.8rem;
+    color: rgb(75, 74, 74);
+}
+
+main {
+    padding: 32px;
+}
+
+main .card {
+    margin: 48px 0px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+main .card h3 {
+    padding: 12px;
+    height: 15rem;
+    font-size: 2.2rem;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .card > div{
+    padding: 24px;
+}
+
+main .card > div > p{
+
+    font-size: 1.1rem;
     color: rgb(75, 74, 74);
 }
